@@ -26,10 +26,11 @@ end
 # loop through each word in the file
 while (word = file.gets)
   letters = sort_letters(word)
+  hash_entry = words_hash[letters]
 
-  if words_hash.has_key?(letters)
-    count += words_hash[letters][0] ? 1 : 2
-    words_hash[letters] = [true, words_hash[letters][1] << word.strip]
+  if hash_entry
+    count += hash_entry[0] ? 1 : 2
+    words_hash[letters] = [true, hash_entry[1] << word.strip]
   else
     words_hash[letters] = [false, [word.strip]]
   end
