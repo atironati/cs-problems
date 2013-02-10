@@ -29,6 +29,8 @@ while (word = file.gets)
   hash_entry = words_hash[letters]
 
   if hash_entry
+    # If the key is a first-time match, we have 2 new anagrams
+    # otherwise, we are adding only 1 new anagram
     count += hash_entry[0] ? 1 : 2
     words_hash[letters] = [true, hash_entry[1] << word.strip]
   else
