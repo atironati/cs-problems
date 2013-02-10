@@ -49,6 +49,7 @@ if verbose_mode
       end
     end
   end
+  puts "\n"
 end
 
 puts "time: #{end_time - start_time}s"
