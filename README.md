@@ -15,6 +15,11 @@ word count: wc -l /usr/share/dict/words
 ```run: ./anagram_solver.rb example_words_file.txt [-v, --verbose]```
    - -v or --verbose will print out each grouping of anagrammed words
 
+Array Rotation/Reflection Detection
+--------------
+Compares two 2-dimensional arrays and determines if they are reflections or rotations of each other. If so returns true.
+
+```run: ./arrd.py [Array1] [Array2]
 
 Terminal Character Limiter
 --------------
